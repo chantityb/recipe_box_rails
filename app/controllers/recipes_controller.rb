@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
 
 
 	def index
-		@recipes = Recipe.all.order("created_at DESC")
+		@recipes = Recipe.with_attached_image.order("created_at DESC")
 	end
 
 	def show
@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
 
 	def create
 		@recipe = Recipe.new(recipe_params)
-
+		
 		if @recipe.save
 			redirect_to @recipe, notice: "Successfully create new recipe"
 		else
