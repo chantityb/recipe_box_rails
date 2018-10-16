@@ -16,6 +16,7 @@ gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails'
+gem 'devise', '~> 4.5'
 
 
 
